@@ -1,0 +1,181 @@
+/* Define custom color variables for consistent styling */
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+/* Apply default styles to all elements */
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+/* Set layout and background color for body */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background-color: var(--dark);
+}
+
+/* Style for the header section */
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Style for the main heading */
+header h1 { 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+/* Style for the task input form */
+#new-task-form {
+	display: flex;;
+}
+
+/* Reset input and button styles */
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+/* Style for the text input where tasks are entered */
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+}
+
+/* Placeholder text color in task input */
+#new-task-input::placeholder {
+	color: var(--grey);
+}
+
+/* Style for the submit button */
+#new-task-submit {
+	color: var(--pink);
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+/* Hover effect for the submit button */
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+/* Active (clicked) effect for the submit button */
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+/* Style for the main content area */
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Padding for the task list section */
+.task-list {
+	padding: 1rem;
+}
+
+/* Style for the task list heading */
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+/* Style for individual task container */
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* Flex container for task content */
+.task .content {
+	flex: 1 1 0%;
+}
+
+/* Style for the task text input */
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+/* Style when task text is editable */
+.task .content .text:not(:read-only) {
+	color: var(--pink);
+}
+
+/* Container for action buttons */
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+/* Style for each action button */
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+/* Hover effect for action buttons */
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+/* Active (clicked) effect for action buttons */
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+/* Gradient text style for edit button */
+.task .actions .edit {
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Red color for delete button */
+.task .actions .delete {
+	color: crimson;
+}

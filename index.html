@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Ensures proper rendering and touch zooming on all devices -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Title of the app displayed in the browser tab which is Nakshatra's Todo App-->
+	<title>Nakshatra's Todo App</title>
+
+	<!-- Link to external CSS file for styling -->
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	
+	<!-- Header section containing the title and the form to add new tasks -->
+	<header>
+		<h1>Nakshatra's Todo App</h1>
+
+		<!-- Form for adding a new task -->
+		<form id="new-task-form">
+			<!-- Input field for entering a task -->
+			<input 
+				type="text" 
+				name="new-task-input" 
+				id="new-task-input" 
+				placeholder="What do you have planned?" />
+			
+			<!-- Submit button to add the task -->
+			<input 
+				type="submit"
+				id="new-task-submit" 
+				value="Add task" />
+		</form>
+	</header>
+
+	<!-- Main section that displays the task list -->
+	<main>
+		<section class="task-list">
+			<h2>Tasks</h2>
+
+			<!-- Container for dynamically added task elements -->
+			<div id="tasks">
+
+				<!--
+				Example of a single task layout:
+				<div class="task">
+					<div class="content">
+						<input 
+							type="text" 
+							class="text" 
+							value="A new task"
+							readonly>
+					</div>
+					<div class="actions">
+						<button class="edit">Edit</button>
+						<button class="delete">Delete</button>
+					</div>
+				</div>
+				-->
+
+			</div>
+		</section>
+	</main>
+
+	<!-- Link to external JavaScript file for interactivity -->
+	<script src="main.js"></script>
+</body>
+</html>
